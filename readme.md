@@ -1,7 +1,17 @@
 Descrizione consegna:
 
 Partendo dal markup della versione svolta in js plain, creare uno slider usando Vue.
+1) creo un data per la variabile che trovo in javascript
 
+- const {slides} = Vue
+
+slides({
+    data(){
+        return{
+            
+        }
+    }
+})
 Bonus:
 
 1 - Aggiungere le thumbnails che si illuminano quando la relativa immagine e' attiva
