@@ -4,7 +4,7 @@
     data(){
         return{
 
-             
+            activeIndex:0,
             slidesObject:[{       
         image: 'img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morale',
@@ -30,5 +30,23 @@
 
 
         }
+    },
+
+    methods:{
+        prevSlide: function(){
+            if(this.activeIndex===0){
+                this.activeIndex=this.slidesObject.length-1;
+            }else{
+                this.activeIndex--;
+            }
+        },
+
+        nextSlide: function(){
+            if(this.activeIndex===this.slidesObject.length-1){
+                this.activeIndex=0;
+            }else{
+                this.activeIndex++;
+            }
     }
+}
 }).mount('#app')

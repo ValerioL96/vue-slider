@@ -14,16 +14,22 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <img :src="slidesObject[activeIndex].image" :alt="slidesObject[activeIndex].title"/>
                     <div class="text">
-                       <ul>
-                        <li v-for="item in slidesObject">
-
-                            {{item}}
-
-                        </li>
-                       </ul>
+                        <h3>{{"slidesObject[activeIndex].title"}}</h3>
+                        <p>
+                           {{"slidesObject[activeIndex].text"}}
+                        </p>
                     </div>
+                </div>
+
+                <div class="thumbs">
+                    <div class="prev" @click="prevSlide()"></div>
+                    <div class="next" @click="nextSlide()"></div>
+                    <div class="thumb" v-for="(slide,index) in slidesObject" :key="index">
+                        <img :src="slide.image" :alt="slide.title">
+                    </div>
+                    
                 </div>
             </div>
         </div>

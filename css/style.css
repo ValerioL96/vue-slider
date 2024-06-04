@@ -31,3 +31,48 @@
     text-align: right;
     color: white;
 }
+
+.thumbs{
+    float: left;
+    height: 300px;
+    background: black;
+    position: relative;
+}
+
+.thumb{
+    height: calc((300px) / 5);
+    opacity: .4;
+}
+
+.thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+
+}
+
+.next::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%) rotate(135deg);
+}
